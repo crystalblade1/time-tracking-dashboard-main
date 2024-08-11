@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("monthly").style.color = "white";
   });
   weekly();
-  document.getElementById("weely").style.color = "white";
+  document.getElementById("weekly").style.color = "white";
 });
 
 const hrs = {

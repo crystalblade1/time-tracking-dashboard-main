@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(226, 43%, 10%);
+}
+
+main {
+  display: flex;
+  width: 1100px;
+  height: 500px;
+  gap: 30px;
+}
+
+.profile-container {
+  height: 100%;
+  width: 400px;
+  border: 1px solid;
+  border-radius: 20px;
+  background-color: hsl(235, 46%, 20%);
+
+  h2 {
+    font-family: "Rubik";
+    color: rgb(168, 168, 168);
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+  }
+
+  .buttons{
+    margin-top: 1rem;
+    margin-left: 2rem;
+  }
+
+  #daily,
+  #weekly,
+  #monthly {
+    cursor: pointer;
+  }
+  h2:hover {
+    color: white;
+  }
+}
+
+.profile-top {
+  width: 100%;
+  height: 70%;
+  border-radius: 20px;
+  background-color: hsl(246, 80%, 60%);
+
+  img {
+    height: 80px;
+    width: 80px;
+    margin-top: 3rem;
+    margin-left: 2.5rem;
+    border: 3px white solid;
+    border-radius: 50%;
+  }
+  p {
+    color: rgb(187, 186, 186);
+    font-family: "Rubik";
+    margin-top: 3rem;
+    margin-left: 2.5rem;
+  }
+  h1 {
+    color: rgb(255, 255, 255);
+    font-family: "Rubik";
+    margin-top: 0.5rem;
+    margin-left: 2.5rem;
+    font-size: 2.6rem;
+  }
+}
+
+.grid-section {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.grid {
+  position: relative;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.work {
+  background-color: hsl(15, 100%, 70%);
+}
+.play {
+  background-color: hsl(195, 74%, 62%);
+}
+.study {
+  background-color: hsl(348, 100%, 68%);
+}
+.exercise {
+  background-color: hsl(145, 58%, 55%);
+}
+.social {
+  background-color: hsl(264, 64%, 52%);
+}
+.self-care {
+  background-color: hsl(43, 84%, 65%);
+}
+
+.inner-grid {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  top: 21%;
+  border-radius: 20px;
+  background-color: hsl(235, 46%, 20%);
+}
+.inner-grid:hover {
+  background-color: hsl(235, 39%, 35%);
+}
+
+.inner-grid p {
+  font-family: "Rubik";
+  font-size: 1.1rem;
+  color: white;
+  margin-left: 2rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+
+  img {
+    align-self: center;
+    margin-right: 2rem;
+    cursor: pointer;
+  }
+  img:hover {
+    filter: brightness(0) invert(1);
+  }
+}
+
+#work-hrs,
+#play-hrs,
+#study-hrs,
+#exercise-hrs,
+#social-hrs,
+#selfCare-hrs {
+  margin-top: 2rem;
+  font-size: 3.5rem;
+}
+
+.lw-hr {
+  display: none;
+}
+
+@media screen and (max-width:900px){
+
+    main{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-container{
+        width: 80%;
+    }
+
+    .profile-top{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid white;
+        height: 170px;
+        
+
+        img{
+            margin-top: 0;
+            margin-left: 0;
+           
+        }
+        h1{
+            font-size: 1.5rem;
+            margin-left: 1rem;
+        }
+        p{
+            margin-top: 0;
+            margin-left: 1rem;
+        }
+    }
+    .buttons{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 1rem;
+        margin-left: 0 !important;
+        
+    }
+    .grid-section{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+    .grid{
+        height: 250px;
+    }
+    .display{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2rem;
+
+    }
+    #work-hrs,#play-hrs,#study-hrs,#exercise-hrs,#social-hrs,#selfCare-hrs{
+        font-size: 2.5rem;
+        margin-left: 1;
+        margin-top: 0;  
+    }
+    .lw-hr{
+        margin-right: 2rem;
+    }
+
+
+}
